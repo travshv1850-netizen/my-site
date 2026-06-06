@@ -1,72 +1,43 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About',
   description: 'shuについて',
 }
 
-const interests = ['筋トレ', '仮想通貨', 'AI', 'アプリ開発', 'コーヒー', '読書']
-
-const links = [
-  { label: 'GitHub', href: 'https://github.com' },
-  { label: 'X (Twitter)', href: 'https://x.com' },
-]
-
 export default function AboutPage() {
   return (
     <div className="max-w-2xl mx-auto px-6 py-16">
       <h1 className="text-xl font-bold mb-10 text-gray-900">About</h1>
 
-      <section className="mb-12">
-        <p className="text-gray-700 leading-relaxed mb-4">
-          フリーランスのWebエンジニアです。主にTypeScript / React / Next.jsを使ってプロダクトを開発しています。
-          AIを活用したアプリケーション開発に特に興味があり、Claude APIやOpenAI APIを使ったプロトタイプを日々作っています。
-        </p>
-        <p className="text-gray-700 leading-relaxed mb-4">
-          仕事以外では筋トレと仮想通貨の勉強が日課。毎日継続することが得意で、気になったことは徹底的に深掘りするタイプです。
-          このブログでは、そんな日々の学びや気づきをアウトプットする場所として使っています。
+      <section className="space-y-5">
+        <p className="text-gray-700 leading-relaxed font-medium">はじめまして。</p>
+        <p className="text-gray-700 leading-relaxed">
+          場所を選ばず生きていける力を身につけたいと思いながら、日々試行錯誤しているアラサーです。
         </p>
         <p className="text-gray-700 leading-relaxed">
-          お仕事の依頼やご質問は X（旧Twitter）のDMまでお気軽にどうぞ。
+          現在はリゾートバイトをしながら、仮想通貨やAIを活用した開発を学んでいます。どちらもまだ勉強中ですが、未来の働き方やお金との向き合い方を考える中で、自然と興味を持つようになりました。
         </p>
-      </section>
-
-      <section className="mb-12">
-        <h2 className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-4">Interests</h2>
-        <div className="flex flex-wrap gap-2">
-          {interests.map((item) => (
-            <span key={item} className="text-sm text-gray-600 bg-gray-50 border border-gray-100 px-3 py-1 rounded-full">
-              {item}
-            </span>
-          ))}
+        <p className="text-gray-700 leading-relaxed">
+          ケトルベルを使った筋トレで頭だけでなく体も鍛えながら、少しずつ理想の生活に近づけるよう取り組んでいます。
+        </p>
+        <div>
+          <p className="text-gray-700 leading-relaxed mb-2">このブログでは、</p>
+          <ul className="text-gray-700 leading-relaxed space-y-1 pl-4">
+            <li>— AIを使った開発の記録</li>
+            <li>— 仮想通貨について学んだこと</li>
+            <li>— 筋トレの記録</li>
+            <li>— リゾートバイト生活での気づき</li>
+            <li>— 作ったものや挑戦したこと</li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mt-2">などを残していきます。</p>
         </div>
-      </section>
-
-      <section className="mb-12">
-        <h2 className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-4">Skills</h2>
-        <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm text-gray-600">
-          {['TypeScript', 'React / Next.js', 'Node.js', 'Python', 'Tailwind CSS', 'PostgreSQL', 'Claude API / OpenAI API', 'Vercel / AWS'].map((skill) => (
-            <span key={skill}>— {skill}</span>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <h2 className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-4">Links</h2>
-        <div className="flex gap-5">
-          {links.map(({ label, href }) => (
-            <Link
-              key={label}
-              href={href}
-              className="text-sm text-gray-500 hover:text-gray-900 transition-colors underline underline-offset-4"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {label}
-            </Link>
-          ))}
-        </div>
+        <p className="text-gray-700 leading-relaxed">
+          完成された知識を発信するというより、「模索している過程」をそのまま記録する場所です。
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          同じように何かを学んでいる方や、これから新しいことに挑戦したい方の参考になれば嬉しいです。
+        </p>
       </section>
     </div>
   )

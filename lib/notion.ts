@@ -8,3 +8,4 @@ export const notion = new Client({
 export const n2m = new NotionToMarkdown({ notionClient: notion })
 
 export const DATABASE_ID = process.env.NOTION_DATABASE_ID!
+export const WORKS_DATABASE_ID = process.env.NOTION_WORKS_DATABASE_ID!
