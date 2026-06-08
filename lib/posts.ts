@@ -4,7 +4,7 @@ import { remark } from 'remark'
 import html from 'remark-html'
 import { notion, n2m, DATABASE_ID } from './notion'
 
-export type Category = '筋トレ' | '仮想通貨' | 'AI' | 'アプリ開発' | '趣味'
+export type Category = '筋トレ' | '仮想通貨' | 'AI' | 'アプリ開発' | '趣味'|'日常'
 
 export type Post = {
   slug: string

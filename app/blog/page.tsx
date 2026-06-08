@@ -6,10 +6,10 @@ export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: '筋トレ・仮想通貨・AI・アプリ開発・趣味についての記事',
+  description: '筋トレ・仮想通貨・AI・アプリ開発・趣味・日常についての記事',
 }
 
-const categories: Category[] = ['筋トレ', '仮想通貨', 'AI', 'アプリ開発', '趣味']
+const categories: Category[] = ['筋トレ', '仮想通貨', 'AI', 'アプリ開発', '趣味', '日常']
 
 export default async function BlogPage({
   searchParams,
