@@ -88,8 +88,8 @@ export async function getPostBySlug(slug: string): Promise<Post> {
   const post = pageToPost(page)
 
   const mdBlocks = await n2m.pageToMarkdown(page.id)
-  const mdString = n2m.toMarkdownString(mdBlocks)
-  const processed = await remark().use(html).process(mdString.parent)
+  const { parent: mdText } = n2m.toMarkdownString(mdBlocks)
+  const processed = await remark().use(html).process(mdText)
 
   return { ...post, content: processed.toString() }
 }
